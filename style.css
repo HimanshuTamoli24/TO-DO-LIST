@@ -62,6 +62,7 @@ button {
   font-size: 16px;
   cursor: pointer;
   border-radius: 5px;
+  margin-left: -30px;
 }
 
 ul {
@@ -87,7 +88,7 @@ ul li::before {
   transform: translateY(-50%);
   height: 20px;
   width: 20px;
-  background: url("images/unchecked.png") center/cover no-repeat; /* Adjust image path and styling */
+  background: url("images/unchecked.png") center/cover no-repeat;
 }
 
 ul li.checked {
@@ -96,7 +97,7 @@ ul li.checked {
 }
 
 ul li.checked::before {
-  background: url("images/checked.png") center/cover no-repeat; /* Adjust image path and styling */
+  background: url("images/checked.png") center/cover no-repeat;
 }
 
 ul li span {
@@ -106,9 +107,14 @@ ul li span {
   transform: translateY(-50%);
   cursor: pointer;
   font-size: 22px;
-
 }
 
 ul li span:hover {
   background: #edeef0;
+}
+
+@media (max-width: 600px) {
+  button {
+    padding: 8px 16px;
+  }
 }

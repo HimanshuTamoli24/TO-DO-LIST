@@ -3,8 +3,14 @@ const listContainer = document.getElementById("list-container");
 const button = document.getElementById("add-button");
 
 // Event listener for adding a task
-
 button.addEventListener("click", addTask);
+
+// Event listener for Enter key press
+inputBox.addEventListener("keydown", function (event) {
+  if (event.key === 'Enter') {
+    addTask();
+  }
+});
 
 // Event delegation for handling click events on <li> and close button
 listContainer.addEventListener("click", function (event) {
@@ -28,18 +34,14 @@ function addTask() {
     li.textContent = inputBox.value;
     listContainer.appendChild(li);
 
-
     // Create a <span> for close button
     let span = document.createElement("span");
     span.textContent = "\u00d7"; // Unicode for '×'
     span.classList.add("close"); // Add a class to style the close button
     li.appendChild(span); // Append the span to the <li>
 
-
-
     // Clear the inputBox value
     inputBox.value = "";
-
 
     saveData();
   }
