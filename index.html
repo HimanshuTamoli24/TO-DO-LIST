@@ -2,26 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <!-- The viewport meta tag ensures proper scaling on different devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>To-Do List</title>
+  <!-- Link to the external CSS file for styling the To-Do List application -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Main container for the To-Do List application -->
   <div class="container">
+    <!-- The main application container -->
     <div class="todo-app">
       <h1>
+        <!-- Heading for the To-Do List application -->
         To-Do List
+        <!-- Icon image for the To-Do List -->
         <img src="images/image.png" alt="To-Do List Icon" />
       </h1>
+      <!-- Form for entering new tasks -->
       <div class="row">
+        <!-- Input box for entering the text of the new task -->
         <input type="text" id="input-box" placeholder="Enter your text" />
+        <!-- Button to add the new task to the list -->
         <button id="add-button">ADD</button>
       </div>
+      <!-- Unordered list to display the tasks -->
       <ul id="list-container">
         <!-- Tasks will be dynamically added here -->
       </ul>
     </div>
   </div>
+  <!-- Link to the external JavaScript file for adding interactivity to the To-Do List application -->
   <script src="script.js"></script>
 </body>
 </html>
